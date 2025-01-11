@@ -12,17 +12,9 @@ resized_image=None
 
 
 if img is not None:
-    c1, c2 = st.columns(2)
-    with c1:
-        image = Image.open(img)
-        resized_image = image.resize((256, 256))
-        st.image(resized_image,width=200)
-    with c2:
-        st.write("**Prediction value ranges from 0 to 1.**")
-        st.text("Value closer to 0: Cat")
-        st.text("Value closer to 1: Dog")
-        st.write("[0-----------------------0.5------------------------1]")
-        st.write("[Cat---------------------------------------------Dog]")
+    image = Image.open(img)
+    resized_image = image.resize((256, 256))
+    st.image(resized_image,width=200)
 
     if st.button('Classify') and image is not None:
         
@@ -40,5 +32,4 @@ if img is not None:
             st.success("It's a **Dog! 🐶**")
         else:
             st.success("It's a **Cat! 🐱**")
-        st.write("Prediction value:",prediction[0][0])
         
