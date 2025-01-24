@@ -1,5 +1,7 @@
 # Cat vs Dog Classifier
 
+ Model Link: https://huggingface.co/spaces/ujjwal-7531/DogVsCat_Classifier
+
 ## About the Project
 The **Cat vs Dog Classifier** is a machine learning project designed to classify images as either a dog or a cat. It leverages advanced neural network techniques and provides an interactive interface for users to upload images directly from their local storage for classification.
 
